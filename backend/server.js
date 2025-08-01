@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
 });
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://commiavikalp:ecommercepass123@cluster1.ulk89u2.mongodb.net/ecommerce?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || '', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
