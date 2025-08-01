@@ -1,0 +1,12 @@
+[build]
+  command = "CI= npm run build"
+  publish = "build"
+
+[build.environment]
+  CI = ""
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
