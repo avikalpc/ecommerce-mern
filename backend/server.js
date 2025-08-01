@@ -35,8 +35,8 @@ app.use(cors({
 const corsOptions = {
   origin: [
     'http://localhost:3000', // Local development
-    'https://your-app-name.netlify.app', // Replace with your Netlify URL
-    process.env.CORS_ORIGIN
+    'https://shopoholicap.netlify.app', // Replace with your Netlify URL
+    process.env.FRONTEND_URL
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
