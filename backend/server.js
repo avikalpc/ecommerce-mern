@@ -28,6 +28,26 @@ app.use(cors({
   credentials: true
 }));
 
+
+
+
+
+const corsOptions = {
+  origin: [
+    'http://localhost:3000', // Local development
+    'https://your-app-name.netlify.app', // Replace with your Netlify URL
+    process.env.CORS_ORIGIN
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
+
+
+
+
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
